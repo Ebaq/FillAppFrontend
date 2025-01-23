@@ -2,17 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-	/* :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  } */
-}
-
 body {
-	/* color: var(--foreground);
-  background: var(--background); */
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,
+		Helvetica, sans-serif;
 }
 
 @layer utilities {
@@ -20,10 +13,6 @@ body {
 		text-wrap: balance;
 	}
 }
-
-/* .date-panel {
-	background-color: #e0e0e0 !important;
-} */
 
 @layer base {
 	:root {
@@ -83,10 +72,22 @@ body {
 }
 
 @layer base {
-	* {
-		@apply border-border;
-	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-[#D9D9D9] text-[#4A5660];
 	}
+}
+
+.wave {
+	position: absolute;
+	top: -70px;
+	left: 0;
+	width: 300%;
+	height: 75vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url('/icons/Vector 1431.svg');
+	background-repeat: repeat-x;
+	background-size: 1988px auto;
+	background-position: top;
 }
